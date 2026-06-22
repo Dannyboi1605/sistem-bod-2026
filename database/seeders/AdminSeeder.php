@@ -13,6 +13,7 @@ class AdminSeeder extends Seeder
         $admins = [
             ['name' => 'SITI NORHIDAYAH BINTI MUSLI', 'email' => 'Hidayah.Musli@sabah.gov.my', 'roles' => ['admin', 'jawatankuasa']],
             ['name' => 'NUR KHAIREENA BINTI FADZLEE', 'email' => 'khaireena.fadzlee@sabah.gov.my', 'roles' => ['admin', 'jawatankuasa']],
+            ['name' => 'SUPERADMIN', 'email' => 'mdafiqdanial16@gmail.com', 'roles' => ['admin', 'jawatankuasa']]
         ];
 
         // Mina is only Urus Setia
@@ -30,7 +31,7 @@ class AdminSeeder extends Seeder
                     'roles' => $userData['roles'],
                     // Since the User model has a 'hashed' cast for password, 
                     // assigning a raw string here will correctly hash it once.
-                    'password' => 'password123',
+                    'password' => '@BOD2026',
                 ]
             );
         }
