@@ -17,7 +17,7 @@ class ParticipantImportSeeder extends Seeder
      */
     public function run()
     {
-        $csvFile = database_path('seeders/participants.csv');
+        $csvFile = database_path('seeders/participants (2).csv');
 
         if (!file_exists($csvFile)) {
             $this->command->error("CSV file not found at: {$csvFile}");
@@ -43,18 +43,18 @@ class ParticipantImportSeeder extends Seeder
                     continue;
                 }
 
-                // Map the CSV data to fields: 'name', 'position', 'agency'
-                // Based on new CSV format: NAME (0), POSITION (1), AGENCY (2), ROLE (3)
-                $name     = $row[0] ?? null;
-                $position = $row[1] ?? null;
-                $agency   = $row[2] ?? null;
+                // Map the CSV data to fields: NAME (0), POSITION (1), AGENCY (2), ROLE (3)
+                $name     = trim($row[0] ?? '');
+                $position = trim($row[1] ?? '');
+                $agency   = trim($row[2] ?? '');
+                $role     = strtolower(trim($row[3] ?? 'peserta'));
 
                 // Basic validation: skip if we don't have a name
                 if (empty($name)) {
                     continue;
                 }
 
-                // Since phone number is removed, we use 'name' and 'agency' as the unique identifier
+                // Use 'name' and 'agency' as the unique identifier
                 User::firstOrCreate(
                     [
                         'name'   => $name,
@@ -62,7 +62,7 @@ class ParticipantImportSeeder extends Seeder
                     ],
                     [
                         'position'         => $position,
-                        'roles'            => ['peserta'],
+                        'roles'            => [$role],
                         'is_eligible_cert' => false,
                     ]
                 );
