@@ -31,7 +31,7 @@ class AdminSeeder extends Seeder
                     'roles' => $userData['roles'],
                     // Since the User model has a 'hashed' cast for password, 
                     // assigning a raw string here will correctly hash it once.
-                    'password' => '@BOD2026',
+                    'password' => 'Password123',
                 ]
             );
         }
