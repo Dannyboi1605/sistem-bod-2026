@@ -13,6 +13,7 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
+<link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
 </head>
 <body class="bg-slate-50 text-slate-950 min-h-screen font-sans">
 
@@ -279,3 +280,4 @@
 
 </body>
 </html>
+

@@ -15,6 +15,7 @@
             font-family: 'Inter', sans-serif;
         }
     </style>
+<link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
 </head>
 <body class="bg-slate-50 text-slate-950 min-h-screen flex items-center justify-center p-4">
     <div class="w-full max-w-md bg-white border border-slate-200 shadow-md backdrop-blur-md rounded-2xl shadow-2xl border border-slate-200 p-8 md:p-10 transition-all duration-300 relative overflow-hidden">
@@ -104,3 +105,4 @@
     </div>
 </body>
 </html>
+

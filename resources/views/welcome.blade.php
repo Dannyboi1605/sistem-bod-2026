@@ -15,6 +15,7 @@
             font-family: 'Inter', sans-serif;
         }
     </style>
+<link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
 </head>
 <body class="bg-slate-50 text-slate-950 min-h-screen flex flex-col justify-between p-6 md:p-12 selection:bg-blue-500/30 selection:text-slate-950">
     <!-- Top Navigation -->
@@ -80,3 +81,4 @@
     </footer>
 </body>
 </html>
+

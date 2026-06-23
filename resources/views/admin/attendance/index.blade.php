@@ -16,6 +16,7 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
+<link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
 </head>
 <body class="bg-slate-50 text-slate-950 min-h-screen p-4 md:p-8">
     <div class="max-w-7xl mx-auto space-y-6">
@@ -561,3 +562,4 @@
     </script>
 </body>
 </html>
+

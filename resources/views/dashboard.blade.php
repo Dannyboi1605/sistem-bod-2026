@@ -54,6 +54,7 @@
         /* Touch-friendly minimum tap targets */
         .tap-target { min-height: 48px; min-width: 48px; }
     </style>
+<link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
 </head>
 <body class="bg-slate-50 text-slate-950 min-h-screen">
 
@@ -727,3 +728,4 @@
     </script>
 </body>
 </html>
+

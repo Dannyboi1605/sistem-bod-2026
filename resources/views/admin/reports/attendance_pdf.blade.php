@@ -25,6 +25,7 @@
         .footer { margin-top: 20px; font-size: 9px; color: #64748b;
                   border-top: 1px solid #e2e8f0; padding-top: 8px; }
     </style>
+<link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
 </head>
 <body>
     <!-- Letterhead -->
@@ -77,3 +78,4 @@
     </div>
 </body>
 </html>
+

@@ -42,6 +42,7 @@
         /* Timeline dot highlight for active items */
         .timeline-item-active .dot { border-color: #1e3a8a; }
     </style>
+<link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
 </head>
 <body class="bg-slate-50 text-slate-950 min-h-screen">
 
@@ -265,3 +266,4 @@
     </main>
 </body>
 </html>
+
