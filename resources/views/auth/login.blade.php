@@ -8,10 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Alpine.js -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Self-hosted Tailwind CSS + Alpine.js via Vite -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -224,6 +222,23 @@
                 }
             }
         }
+    </script>
+
+    {{-- Defense-in-depth: detect if Alpine.js failed to load --}}
+    <div id="alpine-error-banner" style="display:none"
+         class="fixed top-0 left-0 right-0 bg-red-600 text-white text-center p-3 text-sm font-bold z-50">
+        Laman ini gagal dimuat sepenuhnya. Sila cuba semula atau gunakan Wi-Fi.
+        <button onclick="location.reload()" class="ml-2 underline cursor-pointer">Muat Semula</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                var el = document.querySelector('[x-data]');
+                if (el && !el._x_dataStack) {
+                    document.getElementById('alpine-error-banner').style.display = 'block';
+                }
+            }, 3000);
+        });
     </script>
 </body>
 </html>
