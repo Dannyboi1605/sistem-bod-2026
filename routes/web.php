@@ -45,7 +45,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/evaluation', [EvaluationController::class, 'showForm'])->name('evaluation.form');
     Route::post('/evaluation', [EvaluationController::class, 'store'])->name('evaluation.store');
 
-    Route::get('/dashboard/certificate/download', [CertificateController::class, 'download'])->name('certificate.download');
+    Route::get('/dashboard/certificate/download', [CertificateController::class, 'download'])
+        ->middleware('throttle:5,1')
+        ->name('certificate.download');
 
     Route::get('/itinerary', function () {
         return view('participant.itinerary', ['user' => auth()->user()]);
