@@ -93,7 +93,7 @@
 <body>
     <div class="canvas">
         {{-- Full-bleed certificate background --}}
-        <img src="{{ public_path('images/Template-Sijil-Penyertaan.jpg') }}" class="bg-image">
+        <img src="{{ public_path('images/Template-Sijil-Penyertaan (2).jpg') }}" class="bg-image">
 
         {{-- Dynamic participant name — table-cell auto-centers any line count --}}
         <div class="name-container">
